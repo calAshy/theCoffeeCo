@@ -1,8 +1,5 @@
-# theCoffe.co Dashboard:
-
-Breif one line desc
-
-REWORD: `The primary objective of this project is to perform an in-depth Exploratory Data Analysis (EDA) to understand and analyze customer behavior based on transactional data. `
+# theCoffe.co README:
+The primary objective of this project is to perform an "in-depth" exploratory data analysis (EDA) on a machine learning pipeline designed to segement consumers by identifying customer behaviour using synthesised transactional data. 
 
 linkcode
 RFM - Recency Frequency Monetary
