@@ -1,37 +1,53 @@
-# theCoffe.co README:
-The primary objective of this project is to perform an "in-depth" exploratory data analysis (EDA) on a machine learning pipeline designed to segement consumers by identifying customer behaviour using synthesised transactional data. 
-
-linkcode
-RFM - Recency Frequency Monetary
-`RFM is a method used for analyzing customer value. It is commonly used in database marketing and direct marketing and has received particular attention in retail and professional services industries.`
-
-RFM stands for the three dimensions:
-
-Recency – How recently did the customer purchase?
-Frequency – How often do they purchase?
-Monetary Value – How much do they spend?
-
+# Projects README:
+This folder is where the preprocessing, machine learning algorithms and evaluation is created. The primary objective of this project is to perform an in-depth exploratory analysis (EDA) on the capabilities of unsupervised learning models and their ability to segment customers using transaction data. 
+-----------------------------------------------------------------------------
 ## Project Structure:
+The folder structure for this project is broken down in the following way: 
 
-1. **Project Overview:** 
-    1. `0_data/` - Where all dataset files are contained, broken down further into different categories: 
-        - `raw` - Where raw preprocessed datasets are imported to. 
-        - `Processed` - Where raw datasets are processed into complete workable datasets.
-        - `Synthetic` - Where the final dataset sits, a synthetic dataset generated using the synthetic dataset vault. 
+- 0_Data
+    - processed_data
+    - raw_data
 
-    2. `1_code/` 
-    3. `2_dashboard/` 
-    4. `3_notebooks/` - The notebooks folder is used as an inspection envrioment for potential datasets. Unsuccessful datasets are discarded, whereas datasets that were successful were moved on towards pre processing within the '0_data/' folder.  
+- 1_Project_Notebooks
+    - Notebook_1
+    - Notebook_2
+    - Notebook_3
 
-3. Setup/Install Steps: 
+- README.md
+- requirements.txt
 
-4. How each component connects:
+-----------------------------------------------------------------------------
+## Folder Explanations:
 
-5. Project Usage:
+**0_Data** houses the folders: 'processed_data' and 'raw_data'. The 'raw_data' folder is where the initial unprocessed datasets are imported. Then 'processed_data' represents where the preprocessed and merged datasets are created and saved. 
 
-6. Project Pipeline Approach: 
-Combine twin dataset. 
-Add syntethetic columns from df3
-reneame generic feilds to enhance readability
-feed curated dataset into SDV to generate synthetic dataset. 
+**1_Project_Notebooks** is where the main project lives. This folder holds the notebooks 1, 2 and 3. Notebook_1 is where preprocessing is started on the first two datasets and where these two datasets are merged together creating a master dataset -> 'merged_df'. Notebook_2 is where this master dataset is enriched with complimentary features from the third dataset. Once added the master dataset is then used to create the customer profiling dataset 'customer_features' (This is the dataset that will be fed into the machine learning pipeline). Notebook_3 is where the machine learning pipeline is implemented, paired with analysis of the results and an example of application. 
+
+The file **README.md** (this file) is where the project introduction and set up information is housed. 
+ 
+Finally, **requirements.txt** is a text file containing a list of all of the dependencies and imports needed to run the project correctly. 
+
+-----------------------------------------------------------------------------
+## Setting up the project enviroment:
+
+To start open the project root folder in VS Code. This is done to ensure the folder structure is preserved and allows the implemented file paths to run correctly. 
+
+This project has been designed to be run in Visual Studio Code. In order to run the notebooks correctly, ensure the following extensions are installed (found in the 'Extensions' panel in VS Code): 
+
+# Extensions Needed:
+> "Jupyter"
+> "Python"
+
+Before running any of the notebooks, the list of dependencies will also need to be installed into the project onto a the local machine. Running the following command will execute this step: 
+ 
+(Python 3.10+ needed):
+# pip install -r requirements.txt
+
+-----------------------------------------------------------------------------
+## Running the project: 
+At this point the project will be ready to be run. In order to avoid errors on compiling, the notebooks must be run in a specific order. Firstly, open the folder titled: '1_Project_Notebooks' then in order running each notebook: 
+
+### Notebook Execution Order: 
+ > Notebook_1 >  Notebook_2 >  Notebook_3
+
 
